@@ -12,7 +12,7 @@ namespace Store.Core.DataLayer.Contracts
     {
         IQueryable<Branch> GetBranches(Int32 pageSize = 10, Int32 pageNumber = 1);
 
-        Task<Branch> GetBranchAsync(Branch entity);
+        Task<Branch> GetBranchByBranchCodeAsync(string BranchCode);
     }
 }
 

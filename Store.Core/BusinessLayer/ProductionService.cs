@@ -13,8 +13,8 @@ namespace Store.Core.BusinessLayer
 {
     public class ProductionService : Service, IProductionService
     {
-        public ProductionService(ILogger<ProductionService> logger, IUserInfo userInfo, StoreDbContext dbContext)
-            : base(logger, userInfo, dbContext)
+        public ProductionService(ILogger<ProductionService> logger, IUserInfo userInfo, StoreDbContext dbContext, myProductDBContext myPDBContext)
+            : base(logger, userInfo, dbContext, myPDBContext)
         {
         }
 

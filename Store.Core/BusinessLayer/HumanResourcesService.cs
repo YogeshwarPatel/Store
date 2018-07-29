@@ -7,12 +7,14 @@ using Store.Core.BusinessLayer.Responses;
 using Store.Core.DataLayer;
 using Store.Core.EntityLayer.HumanResources;
 
+
+
 namespace Store.Core.BusinessLayer
 {
     public class HumanResourcesService : Service, IHumanResourcesService
     {
-        public HumanResourcesService(ILogger<HumanResourcesService> logger, IUserInfo userInfo, StoreDbContext dbContext)
-            : base(logger, userInfo, dbContext)
+        public HumanResourcesService(ILogger<HumanResourcesService> logger, IUserInfo userInfo, StoreDbContext dbContext,myProductDBContext myPDBContext)
+            : base(logger, userInfo, dbContext, myPDBContext)
         {
         }
 
