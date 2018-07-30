@@ -20,9 +20,25 @@ namespace Store.Core.BusinessLayer
         {
         }
 
-        public Task<ISingleResponse<Branch>> GetBranchByBranchCodeAsync(string branchCode)
+        public async Task<ISingleResponse<Branch>> GetBranchByBranchCodeAsync(string branchCode)
         {
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            Logger?.LogDebug("{0} has been invoked", nameof(GetBranchByBranchCodeAsync));
+
+            var response = new SingleResponse<Branch>();
+
+            try
+            {
+                // Retrieve order by id
+                response.Model = await branchRepository.GetBranchByBranchCodeAsync(branchCode);
+            }
+            catch (Exception ex)
+            {
+                response.SetError(ex, Logger);
+            }
+
+            return response;
+
         }
 
 
