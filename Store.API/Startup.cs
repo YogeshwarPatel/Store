@@ -30,6 +30,7 @@ namespace Store.API
             });
 
             services.AddDbContext<StoreDbContext>(options => options.UseSqlServer(Configuration["AppSettings:ConnectionString"]));
+            services.AddDbContext<myProductDBContext>(options => options.UseSqlServer(Configuration["AppSettings:ConnectionStringIntegrationDB"]));
 
             services.AddScoped<IUserInfo, UserInfo>();
 
@@ -38,6 +39,7 @@ namespace Store.API
             services.AddScoped<IHumanResourcesService, HumanResourcesService>();
             services.AddScoped<IProductionService, ProductionService>();
             services.AddScoped<ISalesService, SalesService>();
+            services.AddScoped<IBranchService , BranchService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

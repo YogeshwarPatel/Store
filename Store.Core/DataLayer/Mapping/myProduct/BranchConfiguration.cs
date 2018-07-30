@@ -13,7 +13,7 @@ namespace Store.Core.DataLayer.Mapping.myProduct
         public void Configure(EntityTypeBuilder<Branch> builder)
         {
             // Mapping for table
-            builder.ToTable("Employee", "HumanResources");
+            builder.ToTable("Branch", "myProduct");
 
             // Set key for entity
             builder.HasKey(b => b.branch_code);

@@ -17,10 +17,10 @@ namespace Store.API.Controllers
         protected ILogger Logger;
         protected IBranchService BranchBusinessObject;
 
-        public BranchController(ILogger<BranchController> logger, IBranchService productionBusinessObject)
+        public BranchController(ILogger<BranchController> logger, IBranchService branchBusinessObject)
         {
             Logger = logger;
-            BranchBusinessObject = productionBusinessObject;
+            BranchBusinessObject = branchBusinessObject;
         }
 
         protected override void Dispose(bool disposing)
