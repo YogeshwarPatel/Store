@@ -20,6 +20,7 @@ namespace Store.Core.BusinessLayer.Contracts
 
         //Task<ISingleResponse<Branch>> GetBranchAsync(Branch entity);
         Task<ISingleResponse<Branch>> GetBranchByBranchCodeAsync(string branchCode);
+
     }
 }
 
